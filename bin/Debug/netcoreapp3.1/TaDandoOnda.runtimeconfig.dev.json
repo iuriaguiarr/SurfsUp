@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ureta\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ureta\\.nuget\\packages"
+    ]
+  }
+}

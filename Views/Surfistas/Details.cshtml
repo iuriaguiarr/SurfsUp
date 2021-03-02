@@ -1,0 +1,54 @@
+@model TaDandoOnda.Models.Surfista
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Surfista</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+    </dl>
+    <dt class = "col-sm-2">
+            Manobras:
+        </dt>
+        <dd class = "col-sm-10">
+            <ul>
+            @foreach (var item in Model.Manobras)
+            {
+                <li>@item.Nome</li>
+            }
+            </ul>
+        </dd>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SurfistaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
